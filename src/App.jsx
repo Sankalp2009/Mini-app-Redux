@@ -1,15 +1,12 @@
-
 import './App.css'
-import { useSelector } from 'react-redux'
+import AllRoutes from './Routes/AllRoutes'
 
 function App() {
 
-  const selectedData = useSelector((state) => state)
-console.log(selectedData);
 
   return (
     <>
-    
+    <AllRoutes />
     </>
   )
 }
