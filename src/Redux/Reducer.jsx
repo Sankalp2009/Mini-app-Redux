@@ -1,9 +1,12 @@
-import React from 'react'
 
-function Reducer() {
-  return (
-    <div>Reducer</div>
-  )
+const reducer = (currentState, action) => {
+   const { type } = action;
+
+   switch (type) {
+
+    default:
+      return currentState;
+   }
 }
 
-export default Reducer
+export { reducer };
