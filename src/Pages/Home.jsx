@@ -1,8 +1,17 @@
-import React from 'react'
+import { Link } from 'react-router'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className="Home">
+      <div className="Inner_Home">
+        <Link to="/product">
+          <button className="home-btn">Home</button>
+        </Link>
+        <Link to="/login">
+          <button className="home-btn">Login</button>
+        </Link>
+      </div>
+    </div>
   )
 }
 
