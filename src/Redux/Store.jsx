@@ -1,9 +1,6 @@
-import React from 'react'
+import { legacy_createStore } from "redux"
+import { reducer } from "./Reducer";
 
-function Store() {
-  return (
-    <div>Store</div>
-  )
-}
+const store = legacy_createStore(reducer)
 
-export default Store
+export { store };
