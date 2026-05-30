@@ -1,6 +1,17 @@
 import { Link } from 'react-router'
+import { useDispatch } from 'react-redux'
+import { Action_Type } from '../Redux/Cart_Reducer/Action'
+
 function ProductCard({ product }) {
   const { id, thumbnail, title, price, category } = product
+  const dispatch = useDispatch()
+
+  const HandleClick = () => {
+    dispatch({
+      type: Action_Type.Add_Cart,
+      payload: product,
+    })
+  }
 
   return (
     <div className="product-card">
@@ -23,7 +34,9 @@ function ProductCard({ product }) {
 
         <p className="product-price">₹ {Math.floor(price)}</p>
 
-        <button className="add-cart-btn">Add To Cart</button>
+        <button className="add-cart-btn" onClick={HandleClick}>
+          Add To Cart
+        </button>
       </div>
     </div>
   )
