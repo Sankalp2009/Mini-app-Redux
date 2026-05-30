@@ -98,3 +98,44 @@
   width: 100%;
   padding: 8px 12px;
 }
+
+/* Form Department */
+
+.form {
+  width: 100%;
+  min-height: 100vh; /* Use viewport height instead of height: 100% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Better centering */
+  align-items: center;
+  gap: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px; /* Prevent form from becoming too wide */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-sizing: border-box; /* Prevent width overflow */
+}
+
+.form_button {
+  padding: 8px 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+
+.form_button:hover {
+  background-color: #f0f0f0;
+}
