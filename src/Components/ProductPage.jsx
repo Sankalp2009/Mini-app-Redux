@@ -1,8 +1,13 @@
-import React from 'react'
-
-function ProductPage() {
+import ProductCard from './ProductCard'
+function ProductPage({data}) {
   return (
-    <div>ProductPage</div>
+    <div className="products-wrapper">
+      <div className="products-grid">
+        {data?.map((el) => (
+          <ProductCard key={el.id} product={el} />
+        ))}
+      </div>
+    </div>
   )
 }
 
