@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import axios from 'axios'
-import { Action_Type } from '../Redux/Action'
+import { Action_Type } from '../Redux/Auth_Reducer/Action'
 import { useNavigate } from 'react-router'
 const InitialState = {
   username: '',

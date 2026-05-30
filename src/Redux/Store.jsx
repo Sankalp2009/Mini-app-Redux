@@ -1,6 +1,23 @@
-import { legacy_createStore } from "redux"
-import { reducer } from "./Reducer";
+import { legacy_createStore, combineReducers, compose } from "redux";
 
-const store = legacy_createStore(reducer)
+// Reducers
+import { reducer as Auth_Reducer } from "./Auth_Reducer/Reducer";
+import { reducer as Product_Reducer } from "./Product_Reducer/Reducer";
+
+// Root Reducer
+const root_Reducer = combineReducers({
+  Auth: Auth_Reducer,
+  Product: Product_Reducer,
+});
+
+// Redux DevTools
+const composeEnhancers =
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+// Store
+const store = legacy_createStore(
+  root_Reducer,
+  composeEnhancers()
+);
 
 export { store };
