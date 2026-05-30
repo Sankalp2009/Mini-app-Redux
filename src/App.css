@@ -72,7 +72,21 @@
   gap: 20px;
   padding: 5px;
 }
+.search-container {
+  position: relative;
+}
 
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
 .Header_home a {
   text-decoration: none;
   color: black;
