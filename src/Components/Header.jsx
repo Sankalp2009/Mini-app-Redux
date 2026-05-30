@@ -2,6 +2,7 @@
 import React from 'react'
 import Search from './Search'
 import { Link    } from 'react-router'
+import { ShoppingCart } from 'lucide-react';
 function Header() {
 
   const Links = [
@@ -35,6 +36,9 @@ function Header() {
             </Link>
           )
         }
+        <div>
+        <ShoppingCart />
+        </div>
        </div>
      </div>
      <div className='Header_right'>
